@@ -1,0 +1,77 @@
+openapi: 3.0.1
+info:
+  title: TodoGraphQL
+  version: 1.0.0
+servers:
+ -
+  url: /
+security:
+ -
+  default: []
+paths:
+  /:
+    post:
+      requestBody:
+        description: Query or mutation to be passed to graphQL API
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Payload:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+         - oauth2
+        optional: false
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: {}
+x-wso2-auth-header: Authorization
+x-wso2-cors:
+  corsConfigurationEnabled: false
+  accessControlAllowOrigins:
+   - '*'
+  accessControlAllowCredentials: false
+  accessControlAllowHeaders:
+   - authorization
+   - Access-Control-Allow-Origin
+   - Content-Type
+   - SOAPAction
+   - apikey
+  accessControlAllowMethods:
+   - GET
+   - PUT
+   - POST
+   - DELETE
+   - PATCH
+   - OPTIONS
+x-wso2-production-endpoints:
+  urls:
+   - http://10.192.225.18:8070/query
+  type: http
+x-wso2-sandbox-endpoints:
+  urls:
+   - http://10.192.225.18:8070/query
+  type: http
+x-wso2-basePath: /query/1.0.0
+x-wso2-transports:
+ - http
+ - https
+x-wso2-response-cache:
+  enabled: false
+  cacheTimeoutInSeconds: 300

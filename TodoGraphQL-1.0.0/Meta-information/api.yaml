@@ -1,0 +1,112 @@
+id:
+  providerName: admin
+  apiName: TodoGraphQL
+  version: 1.0.0
+uuid: 07d69d47-60d9-49ec-9b33-9e8858969d3b
+type: GRAPHQL
+context: /query/1.0.0
+contextTemplate: /query/{version}
+tags: []
+documents: []
+lastUpdated: Sep 28, 2020 8:07:03 AM
+availableTiers:
+ -
+  name: Unlimited
+  displayName: Unlimited
+  description: Allows unlimited requests
+  requestsPerMin: 2147483647
+  requestCount: 2147483647
+  unitTime: 0
+  timeUnit: ms
+  tierPlan: FREE
+  stopOnQuotaReached: true
+availableSubscriptionLevelPolicies: []
+uriTemplates:
+ -
+  uriTemplate: todos
+  httpVerb: QUERY
+  authType: Any
+  httpVerbs:
+   - QUERY
+  authTypes:
+   - Any
+  throttlingConditions: []
+  throttlingTier: Unlimited
+  throttlingTiers:
+   - Unlimited
+  scopes:
+   - null
+  mediationScripts: {}
+  id: 0
+  usedByProducts: []
+  amznResourceTimeout: 0
+ -
+  uriTemplate: createTodo
+  httpVerb: MUTATION
+  authType: Any
+  httpVerbs:
+   - MUTATION
+  authTypes:
+   - Any
+  throttlingConditions: []
+  throttlingTier: Unlimited
+  throttlingTiers:
+   - Unlimited
+  scopes:
+   - null
+  mediationScripts: {}
+  id: 0
+  usedByProducts: []
+  amznResourceTimeout: 0
+apiHeaderChanged: false
+apiResourcePatternsChanged: false
+status: PUBLISHED
+visibility: public
+gatewayLabels: []
+endpointSecured: false
+endpointAuthDigest: false
+transports: http,https
+advertiseOnly: false
+subscriptionAvailability: all_tenants
+corsConfiguration:
+  corsConfigurationEnabled: false
+  accessControlAllowOrigins:
+   - '*'
+  accessControlAllowCredentials: false
+  accessControlAllowHeaders:
+   - authorization
+   - Access-Control-Allow-Origin
+   - Content-Type
+   - SOAPAction
+   - apikey
+  accessControlAllowMethods:
+   - GET
+   - PUT
+   - POST
+   - DELETE
+   - PATCH
+   - OPTIONS
+endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http:\/\/10.192.225.18:8070\/query"},"production_endpoints":{"url":"http:\/\/10.192.225.18:8070\/query"}}'
+responseCache: Disabled
+cacheTimeout: 300
+implementation: ENDPOINT
+authorizationHeader: Authorization
+scopes: []
+isDefaultVersion: false
+isPublishedDefaultVersion: false
+environments:
+ - Production and Sandbox
+createdTime: "1601269562383"
+additionalProperties: {}
+monetizationProperties: {}
+isMonetizationEnabled: false
+environmentList:
+ - SANDBOX
+ - PRODUCTION
+apiSecurity: oauth2,oauth_basic_auth_api_key_mandatory
+endpoints: []
+enableSchemaValidation: false
+apiCategories: []
+accessControl: all
+rating: 0.0
+isLatest: true
